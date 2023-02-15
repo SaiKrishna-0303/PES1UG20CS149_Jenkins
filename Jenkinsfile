@@ -21,9 +21,6 @@ pipeline {
     }
   }
   post {
-    always {
-      echo 'Pipline completed successfully'
-    }
     failure {
       echo 'Pipline failed'
     }
