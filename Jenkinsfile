@@ -3,20 +3,20 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ -o CS149_SK PES1UG20CS149_SaiKrishna.cpp'
-        echo "Build stage successful"
+        sh 'g++ -o PES1UG20CS149_SaiKrishna PES1UG20CS149_SaiKrishna.cpp'
+        echo 'Build stage successful'
       }
     }
     stage('Test') {
       steps {
-        sh './CS149_SK'
+        sh './PES1UG20CS149_SaiKrishna'
         build job: 'PES1UG20CS149-1'
-        echo "Test stage successful"
+        echo 'Test stage successful'
       }
     }
     stage('Deploy') {
       steps {
-        echo "Deployment stage successful"
+        echo 'Deployment stage successful'
       }
     }
   }
